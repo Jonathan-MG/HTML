@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Microdados</title>
+</head>
+<body>
+    <!-- div>article>(h1+p+div>(img+footer)) -->
+    <div>
+        <article itemscope itemtype="https://schema.org/Movie">
+            <h1 itemprop="name">A Star is Born</h1>
+            <p itemprop="abstract">Jackson convida Ally para seu próximo show. Apesar da recusa inicial, ela participa e, com o incentivo de Jackson, canta Shallow no palco com ele.</p>
+            <div>
+                <img 
+                itemprop="image" 
+                src="https://upload.wikimedia.org/wikipedia/pt/1/18/A_Star_Is_Born_2018.png" 
+                alt="A Star is Born Movie.">
+                <footer 
+                itemprop="director" 
+                itemscope itemtype="https://schema.org/Person">
+                    Director: 
+                        <span itemprop="name">Bradley Cooper.</span>
+                        <span itemprop="birthDate">January 5, 1975.</span>
+                </footer>
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+    <form>
+        <!-- <label for="primeiroNome">Primeiro Nome</label> -->
+        <!-- imput[type=text] -->
+        <!-- <input id="primeiroNome" type="text"> -->
+        <label>
+            Nome:
+            <input type="text">
+        </label>
+        
+        <label>
+            Sobrenome:
+            <input type="text">
+        </label>
+
+        <label>
+            E-mail:
+        <input type="email">
+        </label>
+
+        <label>
+            Telefone:
+            <input type="tel">
+        </label>
+        
+        <label>
+            Cor:
+            <input type="color">
+        </label>
+
+        <label>
+            Arquivo:
+            <input type="file">
+        </label>
+
+        <textarea id="" cols="30" rows="10"></textarea>
+
+        <select>
+            <option>São Paulo</option>
+            <option>Rio de Janeiro</option>
+            <option>Minas Gerais</option>
+            <option>Paraná</option>
+        </select>
+
+        <br><br>
+        <!-- input[type=radio]*5 -->
+        <!-- fieldset>legend{Escolha um veículo} -->
+        <fieldset>
+            <legend>Escolha um veículo</legend>
+            <input id="X1" type="radio" name="veiculo"><label for="X1">X1</label>
+            <input id="XC60" type="radio" name="veiculo"><label for="XC60">XC60</label>
+            <input id="Q5" type="radio" name="veiculo"><label for="Q5">Q5</label>
+            <input id="Discovery" type="radio" name="veiculo"><label for="Discovery">Discovery</label>
+            <input id="Taycan" type="radio" name="veiculo"><label for="Taycan">Taycan</label>
+            <input type="submit" value="Enviar">
+        </fieldset>
+        <br><br>
+
+        <fieldset>
+            <legend>De quais cores você gosta?</legend>
+            <input 
+            type="checkbox"
+            id="vermelho"
+            name="cor"
+            ><label for="vermelho">Vermelho</label>
+            <input 
+            type="checkbox"
+            id="amarelo"
+            name="cor"
+            ><label for="amarelo">Amarelo</label>
+            <input 
+            type="checkbox"
+            id="preto"
+            name="cor"
+            ><label for="preto">Preto</label>
+        </fieldset>
+        <input type="submit" value="enviar">
+    </form>
+</body>
+</html>

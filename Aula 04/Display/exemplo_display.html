@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        p{
+            background-color: #acc;
+        }
+        a{
+            background-color: aliceblue;
+        }
+        footer{
+            background-color: beige;
+            /* display: none; */
+        }
+        button{
+            background-color: yellowgreen;
+        }
+        .professores{
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+        .engenharia{
+            display: inline; /* inline não muda, mesmo se determinar altura e largura */
+        }
+        .biomedicina{
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- article#cursos>(p.*2+a.*2+footer.rodape+button.botao) -->
+    <article id="cursos">
+        <p class="engenharia">Engenharia da Computação</p>
+        <p class="biomedicina">Biomedicina</p>
+        <a href="#" class="professores">Lista de Professores</a>
+        <a href="#" class="contato">Entre em contato.</a>
+        <footer class="rodape">Portal de cursos</footer>
+        <button class="botao">Abrir o chat</button>
+        <p>&copy; Todos os direitos reservados.</p>
+    </article>
+</body>
+</html>

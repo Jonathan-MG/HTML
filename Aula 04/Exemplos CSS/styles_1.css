@@ -1,0 +1,58 @@
+/* Aqui você seleciona quais identificadores e qual caracteristica aplicar a cada um deles. */
+/* Seletor de ID = #; Seletor de Classe = . */
+
+/* Seletor por ID */
+#titulo{
+    color: green;
+    text-align: center;
+}
+
+/* Seletor por tipo e ID */
+p#descricao{
+    color: blue;
+}
+
+/* Seletor por tipo e Classe */
+p.promocao{
+    text-align: center;
+    background-color: lightgreen;
+    border-radius: 15px;
+}
+
+h1.promocao{
+    color: yellow;
+}
+
+.nova{
+    color: white;
+}
+
+/* Esse é mais específico, só irá atribuir as características para quem tiver Classe = final-pagina e ID = rodape */
+p.final-pagina#rodape{
+    background-color: lightgray;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* .curso{
+    background-color: aliceblue;
+}
+.novo-curso{
+    background-color: aliceblue;
+    color: red;
+} */
+
+/* Atribuir uma mesma característica para diferentes classes */
+.curso, .novo-curso{
+    background-color: aliceblue;
+}
+
+.curso, .novo-curso, #contato{
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 25px;
+}
+
+.novo-curso{
+    color: red;
+}

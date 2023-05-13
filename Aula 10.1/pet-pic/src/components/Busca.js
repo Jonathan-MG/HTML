@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { InputText } from 'primereact/inputtext'
 import { Button } from 'primereact/button'
 
-const Busca = (props) => {
+const Busca = ({ dica, onBuscaRealizada }) => {
   // const lista = useState('')
   // const termoDeBusca = lista[0]
   // const setTermoDeBusca = lista[1]
@@ -14,8 +14,9 @@ const Busca = (props) => {
 
   const onFormSubmit = (event) => {
     event.preventDefault()
+    onBuscaRealizada(termoDeBusca)
   }
-  
+
   return (
     <form onFormSubmit={onFormSubmit}>
         <div className="flex flex-column">
@@ -23,7 +24,7 @@ const Busca = (props) => {
                 <i className="pi pi-search"/>
                     <InputText 
                     className="w-full"
-                    placeholder={props.dica}
+                    placeholder={dica}
                     onChange={onTermoAlterado}
                     value={termoDeBusca}
                     />

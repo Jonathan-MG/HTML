@@ -19,27 +19,27 @@ const Busca = ({ dica, onBuscaRealizada }) => {
 
   return (
     <form onSubmit={onFormSubmit}>
-        <div className="flex flex-column">
-            <span className="p-input-icon-left w-full">
-                <i className="pi pi-search"/>
-                    <InputText 
-                    className="w-full"
-                    placeholder={dica}
-                    onChange={onTermoAlterado}
-                    value={termoDeBusca}
-                    />
-            </span>
-            <Button 
-            label='OK'
-            className="p-button-outlined mt-2"
-            />
-        </div>
+      <div className="flex flex-column">
+        <span className="p-input-icon-left w-full">
+          <i className="pi pi-search" />
+          <InputText
+            className="w-full"
+            placeholder={dica}
+            onChange={onTermoAlterado}
+            value={termoDeBusca}
+          />
+        </span>
+        <Button
+          label='OK'
+          className="p-button-outlined mt-2"
+        />
+      </div>
     </form>
   )
 }
 
 Busca.defaultProps = {
-    dica: 'Digite algo que deseja ver.'
+  dica: 'Digite algo que deseja ver.'
 }
 
 export default Busca

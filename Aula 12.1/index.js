@@ -42,9 +42,9 @@ const historicoPedidosCashback = (historicoPedidosCashback_Atual = [], acao) => 
 // Reducer: Caixa
 const caixa = (caixa_Atual = 0, acao) => {
     if (acao.type === "SOLICITAR_CASHBACK"){
-        return [caixa_Atual -= acao.payload.valor]
+        return caixa_Atual - acao.payload.valor
     } else if (acao.type === "CRIAR_CONTRATO"){
-        return [caixa_Atual += acao.payload.taxa]
+        return caixa_Atual + acao.payload.taxa
     }
     return caixa_Atual
 }
@@ -74,5 +74,25 @@ const store = createStore(todosOsReducers)
 // store.getState para observar o estado atual
 // Enviar uma ação de criação de contrato para o João pagando 50 reais e exibir o estado depois.
 
-store.dispatch(criarContrato("João", 50))
-console.log(store.getState())
+// store.dispatch(criarContrato("João", 50))
+// console.log(store.getState())
+
+const transacao = (store) => {
+    const clientes = ["José", "Maria", "Pedro", "Antônio"]
+    const funcoes = {
+        0: (nome) => store.dispatch(criarContrato(nome, 50)),
+        1: (nome) => store.dispatch(cancelarContrato(nome)),
+        2: (nome) => {
+            const valor = Math.floor(Math.random() * (30 - 10 + 1) ) + 10
+            store.dispatch(solicitarCashback(nome, valor))
+        }
+    }
+    const indice = Math.floor(Math.random() * (3 - 0 + 1) ) + 0
+    const n_funcao = Math.floor(Math.random() * (2 - 0 + 1) ) + 0
+    funcoes[n_funcao](clientes[indice])
+}
+
+setInterval(() => {
+    transacao(store)
+    console.log(store.getState())
+}, 5000);
